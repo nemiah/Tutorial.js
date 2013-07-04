@@ -1,0 +1,29 @@
+#!/usr/bin/expect -f
+set address [lindex $argv 0]
+set username [lindex $argv 1]
+set password [lindex $argv 2]
+spawn telnet localhost 4242
+expect "$ "
+send -- "content.location.href='$address'\n"
+expect "$ "
+send -- "repl.enter(content)\n"
+expect "$ "
+send -- "repl.look()\n"
+expect "$ "
+send -- "\$j('#loginUsername').val('$username')\n"
+expect "$ "
+send -- "\$j('#loginPassword').val('$password')\n"
+expect "$ "
+send -- "\$j('#anwendung').val('open3A')\n"
+expect "$ "
+send -- "\$j('.LPBigButton').trigger('click')\n"
+expect "$ "
+send -- "\$j('#mTestMenuEntry > div').trigger('click')\n"
+expect "$ "
+send -- "\$j('input\[type=button\]\[value~=\"Gespeicherte\"\]').trigger('click')\n"
+expect "$ "
+send -- "\$j('.savedTestSetRun:first').trigger('click')\n"
+expect "$ "
+send -- "repl.quit()\n"
+exit
+
