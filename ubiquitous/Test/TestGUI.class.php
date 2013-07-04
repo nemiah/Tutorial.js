@@ -54,7 +54,7 @@ class TestGUI extends Test implements iGUIHTML2 {
 		$BP->popup("", "Audio aktualisieren", "Test", $this->getID(), "updateAudio", "");
 		
 		$BP = $gui->addSideButton("Vertonen", "./ubiquitous/Test/images/theater.png");
-		$BP->popup("", "Vertonen", "Test", $this->getID(), "makeAudio", "", "", "{width: 500, hPosition: \'center\'}");
+		$BP->popup("", "Vertonen", "Test", $this->getID(), "makeAudio", "", "", "{width: 500, hPosition: 'center'}");
 		
 		$BP = $gui->addSideButton("Editieren", "./ubiquitous/Test/images/slideshow.png");
 		$BP->rmePCR("mTestStep", $this->getID(), "getHtml", $this->getID(), "$('contentScreen').update(transport.responseText); TestManager.initVideoEdit();");
@@ -102,7 +102,7 @@ class TestGUI extends Test implements iGUIHTML2 {
 		$BN->onclick("if(\$j('#makeAudio div.currentAudio').next().length == 0) return; \$j('#makeAudio div.currentAudio').next().css('display', 'block').addClass('currentAudio');\$j('#makeAudio div.currentAudio:first').css('display', 'none').removeClass('currentAudio');");
 		echo $BN;
 		
-		$BP = new Button("ZurÃ¼ck", "back");
+		$BP = new Button("Zurück", "back");
 		$BP->style("margin:5px;");
 		$BP->onclick("if(\$j('#makeAudio div.currentAudio').prev().length == 0) return; \$j('#makeAudio div.currentAudio').prev().css('display', 'block').addClass('currentAudio');\$j('#makeAudio div.currentAudio:last').css('display', 'none').removeClass('currentAudio');");
 		

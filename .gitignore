@@ -2,4 +2,5 @@
 /system/IECache/**/*
 /plugins/Merlin
 /applications/ubiquitousApplication.class.php
+/plugins/Plugins/
 /updateFramework.php

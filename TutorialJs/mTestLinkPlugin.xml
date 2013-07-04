@@ -20,7 +20,7 @@
 <phynx>
 	<plugin>
 		<name>Test</name>
-		<menuName>pUnit</menuName>
+		<menuName>Tutorial.js</menuName>
 		<collection>mTest</collection>
 		<javascript>Test.js</javascript>
 		
